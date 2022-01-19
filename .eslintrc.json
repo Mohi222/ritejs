@@ -5,7 +5,8 @@
     "prettier"
   ],
   "rules": {
-    "canonical/filename-match-exported": "off"
+    "canonical/filename-match-exported": "off",
+    "react/forbid-component-props": "off",
   },
   "overrides": [
     {

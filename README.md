@@ -9,14 +9,16 @@
 
 ## Features
 
-- [x] Everything for being _Speed_: [React](https://github.com/facebook/react), [Nextjs](https://nextjs.org), [pnpm](https://pnpm.js.org/), [SWC](https://github.com/swc-project/swc)
+- [x] Everything for being _Speed_: [React](https://github.com/facebook/react), [Nextjs](https://nextjs.org), [pnpm](https://pnpm.js.org/)
 - [x] [File system based routing](https://nextjs.org/docs/routing/introduction)
 - [x] [Bearable state management](https://github.com/pmndrs/zustand)
 - [x] [Layout system](./layouts)
 - [x] [Zero-config PWA](https://github.com/shadowwalker/next-pwa)
-- [ ] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
+- [x] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
 - [x] [Mantine](https://mantine.dev/)
-- [ ] [Every icon from everywhere](https://github.com/antfu/unplugin-icons)
+- [x] [any icon from anywhere](https://github.com/antfu/unplugin-icons)
+- [x] [Easily use SVGs](https://react-svgr.com)
+- [ ] Hooks: [React Use](https://github.com/streamich/react-use) and [SWR](https://swr.vercel.app/)
 - [ ] i18n
 - [ ] [Markdown Support](https://github.com/antfu/vite-plugin-md)
 - [ ] [On-demend Api importing](https://github.com/antfu/unplugin-auto-import)

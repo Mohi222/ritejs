@@ -40,16 +40,27 @@ const Counter = () => {
     decrease] = useStore(state => {
     return [state.count, state.increase, state.decrease];
   }, shallow);
-  return <Group>
+  return <Group align="center" direction="column">
     <Text>Count is {count}</Text>
-    <Button onClick={() => {
-      return increase();
-    }}
-    > + </Button>
-    <Button onClick={() => {
-      return decrease();
-    }}
-    > - </Button>
+    <p>hm</p>
+    <Group>
+      <Button
+        color="green"
+        onClick={() => {
+          return increase();
+        }}
+        radius="xl"
+        variant='filled'
+      >Increase</Button>
+      <Button
+        color="red"
+        onClick={() => {
+          return decrease();
+        }}
+        radius="xl"
+        variant='filled'
+      >Decrease</Button>
+    </Group>
 
   </Group>;
 };

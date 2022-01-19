@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
-import { NextIntlProvider } from 'next-intl';
 import type { AppProps } from 'next/app';
 import type { ReactElement,
   ReactNode } from 'react';
 import DefaultLayout from '../layouts/DefaultLayout';
+
+// eslint-disable-next-line import/no-unassigned-import
+import '../styles/globals.css';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode,
@@ -19,9 +21,8 @@ const MyApp = ({ Component,
 
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => {
-    return <NextIntlProvider messages={pageProps.messages}>
-      <DefaultLayout>{page}</DefaultLayout>
-    </NextIntlProvider>;
+    return <DefaultLayout>{page}</DefaultLayout>
+    ;
   });
   return getLayout(<Component {...pageProps} />);
 };
