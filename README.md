@@ -11,13 +11,13 @@
 
 - [x] Everything for being _Speed_: [React](https://github.com/facebook/react), [Nextjs](https://nextjs.org), [pnpm](https://pnpm.js.org/), [SWC](https://github.com/swc-project/swc)
 - [x] [File system based routing](https://nextjs.org/docs/routing/introduction)
-- [ ] [Bearable state management](https://github.com/pmndrs/zustand)
-- [ ] [Layout system](./src/layouts)
-- [ ] [Zero-config PWA](https://github.com/antfu/vite-plugin-pwa)
+- [x] [Bearable state management](https://github.com/pmndrs/zustand)
+- [x] [Layout system](./layouts)
+- [x] [Zero-config PWA](https://github.com/shadowwalker/next-pwa)
 - [ ] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
-- [ ] [Mantine](https://mantine.dev/)
+- [x] [Mantine](https://mantine.dev/)
 - [ ] [Every icon from everywhere](https://github.com/antfu/unplugin-icons)
-- [ ] [I18n](./locales)
+- [ ] i18n
 - [ ] [Markdown Support](https://github.com/antfu/vite-plugin-md)
 - [ ] [On-demend Api importing](https://github.com/antfu/unplugin-auto-import)
 - [ ] [Critical CSS](https://github.com/GoogleChromeLabs/critters)

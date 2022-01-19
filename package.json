@@ -1,23 +1,30 @@
 {
-  "name": "ritejs",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
+    "@mantine/core": "^3.6.1",
+    "@mantine/hooks": "^3.6.1",
+    "@mantine/modals": "^3.6.1",
+    "@mantine/next": "^3.6.1",
+    "@mantine/notifications": "^3.6.1",
     "eslint-config-canonical": "^33.0.1",
     "eslint-config-prettier": "^8.3.0",
     "next": "12.0.8",
+    "next-pwa": "^5.4.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "zustand": "^3.6.9"
   },
   "devDependencies": {
     "@types/react": "^17.0.38",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
     "typescript": "^4.5.4"
+  },
+  "name": "ritejs",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start"
   }
 }
