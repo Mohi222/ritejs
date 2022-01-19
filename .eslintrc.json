@@ -2,7 +2,8 @@
   "extends": [
     "next",
     "canonical",
-    "prettier"
+    "prettier",
+    "./.eslintrc-auto-import.json",
   ],
   "rules": {
     "canonical/filename-match-exported": "off",
