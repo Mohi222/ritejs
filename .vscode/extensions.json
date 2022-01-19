@@ -1,0 +1,31 @@
+{
+  "recommendations": [
+    // Additional support
+    "mikestead.dotenv",
+    "mgmcdermott.vscode-language-babel",
+    "csstools.postcss",
+    "yzhang.markdown-all-in-one",
+
+    // Auto completion and intellisense
+    "antfu.iconify",
+    "lokalise.i18n-ally",
+    "bradlc.vscode-tailwindcss",
+
+    // Lint
+    "dbaeumer.vscode-eslint",
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+
+    // Snippets
+    "andrew-codes.cypress-snippets",
+    "dsznajder.es7-react-js-snippets",
+    "usernamehw.errorlens",
+    "xabikos.javascriptsnippets",
+
+    // Additional features
+    "humao.rest-client",
+    "eamodio.gitlens",
+    "formulahendry.auto-rename-tag",
+  ]
+}
