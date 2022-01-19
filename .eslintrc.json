@@ -1,3 +1,46 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "canonical",
+    "prettier"
+  ],
+  "rules": {
+    "canonical/filename-match-exported": "off"
+  },
+  "overrides": [
+    {
+      "extends": [
+        "canonical/typescript"
+      ],
+      "files": "*.ts",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    },
+    {
+      "extends": [
+        "canonical/react",
+        "canonical/jsx-a11y",
+        "canonical/next",
+        "canonical/typescript"
+      ],
+      "files": "*.tsx",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    },
+    {
+      "extends": [
+        "canonical/json"
+      ],
+      "files": "*.json"
+    },
+    {
+      "extends": [
+        "canonical/graphql"
+      ],
+      "files": "*.graphql"
+    }
+  ],
+  "root": true
 }

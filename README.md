@@ -9,24 +9,23 @@
 
 ## Features
 
-- [x] Everything for being _Speed_: [React](https://github.com/facebook/react), [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.js.org/), [ESBuild](https://github.com/evanw/esbuild)
-- [ ] [File system based routing](https://github.com/hannoeru/vite-plugin-pages)
+- [x] Everything for being _Speed_: [React](https://github.com/facebook/react), [Nextjs](https://nextjs.org), [pnpm](https://pnpm.js.org/), [SWC](https://github.com/swc-project/swc)
+- [x] [File system based routing](https://nextjs.org/docs/routing/introduction)
 - [ ] [Bearable state management](https://github.com/pmndrs/zustand)
 - [ ] [Layout system](./src/layouts)
 - [ ] [Zero-config PWA](https://github.com/antfu/vite-plugin-pwa)
 - [ ] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
+- [ ] [Mantine](https://mantine.dev/)
 - [ ] [Every icon from everywhere](https://github.com/antfu/unplugin-icons)
 - [ ] [I18n](./locales)
 - [ ] [Markdown Support](https://github.com/antfu/vite-plugin-md)
 - [ ] [On-demend Api importing](https://github.com/antfu/unplugin-auto-import)
-- [ ] [Server-side generation](https://github.com/antfu/vite-ssg)
 - [ ] [Critical CSS](https://github.com/GoogleChromeLabs/critters)
 - [ ] [Unit Testing](https://github.com/vitest-dev/vitest)
 - [ ] [E2E Testing](https://cypress.io/)
 - [ ] [Standards checking with Husky](https://github.com/typicode/husky)
 - [ ] [Github Actions](https://github.com/features/actions)
 - [ ] [TypeScript](https://www.typescriptlang.org/), because it's the _right_ way to do _Rite_
-- [ ] Deploy on Netlify
 - [ ] Deploy on Vercel
 
 ## Comes with
@@ -45,8 +44,6 @@
 
 - React Router
 - Zustand
-- vite-plugin-pwa
-- vite-plugin-mdx
 
 ### Coding style
 
@@ -63,11 +60,8 @@
 ### Dev tools
 
 - TypeScript
-- Vitest
 - Cypress
 - pnpm
-- ssr
-- Netlify
 - Recomended VS Code Extentions
 
 ## Usage
