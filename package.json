@@ -38,7 +38,12 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.0.12",
+    "postcss": "^8.4.5",
     "unplugin-auto-import": "^0.5.11",
-    "unplugin-icons": "^0.13.0"
+    "unplugin-icons": "^0.13.0",
+    "vite-plugin-sass-dts": "^1.1.23",
+    "vite-plugin-tips": "^2.1.0",
+    "vite-plugin-webfont-dl": "^1.0.7",
+    "vite-tsconfig-paths": "^3.3.17"
   }
 }

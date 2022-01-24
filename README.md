@@ -26,6 +26,7 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse)
 - [x] [any icon from anywhere](https://github.com/antfu/unplugin-icons)
 - [x] [On-demend importing](https://github.com/antfu/unplugin-auto-import)
 - [x] [Easily use SVGs](https://react-svgr.com)
+- [x] [Fast & Easy Google Fonts support](https://github.com/feat-agency/vite-plugin-webfont-dl)
 - [x] [Markdown Support](https://nextjs.org/docs/advanced-features/using-mdx#nextmdx)
 - [ ] Hooks: [React Use](https://github.com/streamich/react-use) and [SWR](https://swr.vercel.app/)
 - [ ] [Linting](https://github.com/eslint/eslint)
@@ -82,6 +83,8 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse)
 - [PostCSS](https://postcss.org/)
 - [pnpm](https://pnpm.js.org)
 - [Recomended VS Code Extentions](./.vscode/extensions.json)
+- [`vite-plugin-tips`](https://github.com/yingpengsha/vite-plugin-tips)
+- [`vite-plugin-sass-dts`](https://github.com/activeguild/vite-plugin-sass-dts)
 
 ## Usage
 

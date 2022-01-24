@@ -16,7 +16,15 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{ colorScheme }}
+        theme={{
+          colorScheme,
+          fontFamily:
+            '"Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+          headings: {
+            fontFamily:
+              '"Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+          },
+        }}
       >
         {children}
       </MantineProvider>
