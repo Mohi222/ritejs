@@ -14,10 +14,10 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse)
   - Server and Client Routing
   - File-System Routing
   - Domain-based Routing
-- [ ] [Bearable store-based state management](https://github.com/pmndrs/zustand)
-- [ ] [Minimalist atomic state management](https://github.com/pmndrs/jotai)
+- [x] [Bearable store-based state management](https://github.com/pmndrs/zustand)
+- [x] [Minimalist atomic state management](https://github.com/pmndrs/jotai)
 - [ ] [Supabase](https://supabase.com)
-- [ ] [Layout system](./layouts)
+- [x] [Layout system](./layouts)
 - [ ] [Zero-config PWA](https://github.com/shadowwalker/next-pwa)
 - [ ] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
 - [ ] [Mantine](https://mantine.dev/)
