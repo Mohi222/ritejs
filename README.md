@@ -16,13 +16,13 @@ Inspired by [Vitesse](https://github.com/antfu/vitesse)
   - Domain-based Routing
 - [x] [Bearable store-based state management](https://github.com/pmndrs/zustand)
 - [x] [Minimalist atomic state management](https://github.com/pmndrs/jotai)
-- [ ] [Supabase](https://supabase.com)
+- [x] [Supabase](https://supabase.com)
 - [x] [Layout system](./layouts)
 - [ ] [Zero-config PWA](https://github.com/shadowwalker/next-pwa)
 - [ ] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
-- [ ] [Mantine](https://mantine.dev/)
-- [ ] [SCSS](https://sass-lang.com) support
-- [ ] [CSS-in-JS](https://mantine.dev/theming/create-styles/) support
+- [x] [Mantine](https://mantine.dev/)
+- [x] [SCSS](https://sass-lang.com)
+- [x] [CSS-in-JS](https://mantine.dev/theming/create-styles/)
 - [ ] [any icon from anywhere](https://github.com/antfu/unplugin-icons)
 - [ ] [On-demend Api importing](https://github.com/antfu/unplugin-auto-import)
 - [ ] [Easily use SVGs](https://react-svgr.com)
