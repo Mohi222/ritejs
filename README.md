@@ -1,30 +1,40 @@
-<h1 align="center"><b>Rite</b></h1>
-<p align='center'>
-  Opinionated <a href="https://nextjs.org">Nextjs</a> </a> Starter Template
-  <br />
-  Inspired by <a href="https://github.com/antfu/vitesse">Vitesse</a>
-</p>
+# Rite
+
+Opinionated React Starter Template
+
+Inspired by [Vitesse](https://github.com/antfu/vitesse)
 
 ## Features
 
-- [React](https://github.com/facebook/react), [Nextjs](https://nextjs.org), [pnpm](https://pnpm.js.org/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://github.com/facebook/react)
+  - [Vite](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild)
+- [ ] [TypeScript](https://www.typescriptlang.org/)
   , because it's the _right_ way to do _Rite_
-- [File system based routing](https://nextjs.org/docs/routing/introduction)
-- [Bearable state management](https://github.com/pmndrs/zustand)
-- [Supabase](https://supabase.com)
-- [Layout system](./layouts)
-- [Zero-config PWA](https://github.com/shadowwalker/next-pwa)
-- [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
-- [Mantine](https://mantine.dev/)
-- [SCSS](https://sass-lang.com) support
-- [CSS-in-JS](https://mantine.dev/theming/create-styles/) support
-- [any icon from anywhere](https://github.com/antfu/unplugin-icons)
-- [On-demend Api importing](https://github.com/antfu/unplugin-auto-import)
-- [Easily use SVGs](https://react-svgr.com)
-- [Markdown Support](https://nextjs.org/docs/advanced-features/using-mdx#nextmdx)
-- Hooks: [React Use](https://github.com/streamich/react-use) and [SWR](https://swr.vercel.app/)
-- [Linting](https://github.com/eslint/eslint)
+- [ ] Route by your way
+  - Server and Client Routing
+  - File-System Routing
+  - Domain-based Routing
+- [ ] [Bearable store-based state management](https://github.com/pmndrs/zustand)
+- [ ] [Minimalist atomic state management](https://github.com/pmndrs/jotai)
+- [ ] [Supabase](https://supabase.com)
+- [ ] [Layout system](./layouts)
+- [ ] [Zero-config PWA](https://github.com/shadowwalker/next-pwa)
+- [ ] [Tailwnd CSS 3](https://github.com/tailwindlabs/tailwindcss)
+- [ ] [Mantine](https://mantine.dev/)
+- [ ] [SCSS](https://sass-lang.com) support
+- [ ] [CSS-in-JS](https://mantine.dev/theming/create-styles/) support
+- [ ] [any icon from anywhere](https://github.com/antfu/unplugin-icons)
+- [ ] [On-demend Api importing](https://github.com/antfu/unplugin-auto-import)
+- [ ] [Easily use SVGs](https://react-svgr.com)
+- [ ] [Markdown Support](https://nextjs.org/docs/advanced-features/using-mdx#nextmdx)
+- [ ] Hooks: [React Use](https://github.com/streamich/react-use) and [SWR](https://swr.vercel.app/)
+- [ ] [Linting](https://github.com/eslint/eslint)
+- [ ] i18n
+- [ ] [Testing](https://testing-library.com/)
+- [ ] [E2E Testing](https://cypress.io/)
+- [ ] [Standards checking with Husky](https://github.com/typicode/husky)
+- [ ] [Storybook](https://storybook.js.org/)
+- [ ] [Github Actions](https://github.com/features/actions)
 
 ## Comes with
 
@@ -103,12 +113,6 @@ and your App will be live in a minute.
 
 - [ ] Add module structure
 - [ ] Add Demo for features
-- [ ] i18n
-- [ ] [Testing](https://testing-library.com/)
-- [ ] [E2E Testing](https://cypress.io/)
-- [ ] [Standards checking with Husky](https://github.com/typicode/husky)
-- [ ] [Storybook](https://storybook.js.org/)
-- [ ] [Github Actions](https://github.com/features/actions)
 
 ## Why
 

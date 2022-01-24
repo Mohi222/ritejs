@@ -1,37 +1,32 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "react",
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "types": [
-      "unplugin-icons/types/react",
-    ],
+    "forceConsistentCasingInFileNames": true,
+    "incremental": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "paths": {
-      "@/*": ["./modules/*"],
+      "@/*": ["./modules/*"]
     },
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "strictNullChecks": true,
+    "types": ["vite/client"]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "exclude": ["dist", "node_modules", "public", "tests"]
 }
