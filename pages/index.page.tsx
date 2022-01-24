@@ -1,17 +1,6 @@
 import CounterExample from "@/example/components/CounterExample";
 import UserExample from "@/example/components/UserExample";
-import {
-  Card,
-  Center,
-  Code,
-  Container,
-  Divider,
-  Grid,
-  Group,
-  Space,
-  Text,
-  Title,
-} from "@mantine/core";
+import { Space, Text } from "@mantine/core";
 import React from "react";
 
 export { Page };
