@@ -1,15 +1,4 @@
 {
-  "name": "rite",
-  "version": "0.0.0",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "dev": "npm run server",
-    "prod": "npm run build && npm run server:prod",
-    "build": "vite build && vite build --ssr",
-    "server": "ts-node ./server",
-    "server:prod": "cross-env NODE_ENV=production ts-node ./server"
-  },
   "dependencies": {
     "@mantine/core": "^3.6.2",
     "@mantine/hooks": "^3.6.2",
@@ -40,6 +29,9 @@
   "devDependencies": {
     "@iconify-json/carbon": "^1.0.12",
     "autoprefixer": "^10.4.2",
+    "eslint": "^8.7.0",
+    "eslint-config-canonical": "^33.0.1",
+    "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.5",
     "tailwindcss": "^3.0.16",
     "unplugin-auto-import": "^0.5.11",
@@ -48,5 +40,16 @@
     "vite-plugin-tips": "^2.1.0",
     "vite-plugin-webfont-dl": "^1.0.9",
     "vite-tsconfig-paths": "^3.3.17"
-  }
+  },
+  "license": "MIT",
+  "name": "rite",
+  "private": true,
+  "scripts": {
+    "build": "vite build && vite build --ssr",
+    "dev": "npm run server",
+    "prod": "npm run build && npm run server:prod",
+    "server": "ts-node ./server",
+    "server:prod": "cross-env NODE_ENV=production ts-node ./server"
+  },
+  "version": "0.0.0"
 }
