@@ -11,7 +11,6 @@ import mdx from "vite-plugin-mdx";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { ViteTips } from "vite-plugin-tips";
 import sassDts from "vite-plugin-sass-dts";
-// @ts-ignore
 import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
 
 const config: UserConfig = {

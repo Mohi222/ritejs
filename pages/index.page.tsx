@@ -15,6 +15,9 @@ function Page() {
       <Space h="xl" />
       <CounterExample />
       <UserExample />
+      <h1 className="text-3xl font-bold underline text-center">
+        Hello Tailwind!
+      </h1>
     </Container>
   );
 }
