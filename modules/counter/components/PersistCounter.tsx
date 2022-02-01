@@ -1,42 +1,59 @@
-import { ActionIcon, Button, Group, Text } from "@mantine/core";
-import React from "react";
-import create from "zustand";
-import { persist } from "zustand/middleware";
-import shallow from "zustand/shallow";
+import { ActionIcon,
+  Group,
+  Text } from '@mantine/core';
+import React from 'react';
+import create from 'zustand';
+import { persist } from 'zustand/middleware';
 
 export type CounterStore = {
-  count: number;
-  increase: () => void;
-  decrease: () => void;
+  count: number,
+  decrease: () => void,
+  increase: () => void,
 };
 
 export const useCounterStore = create<CounterStore>(
   persist(
-    (set, get) => ({
-      count: 0,
-      increase: () => set((state) => ({ count: state.count + 1 })),
-      decrease: () => set((state) => ({ count: state.count - 1 })),
-    }),
+    (set) => {
+      return {
+        count: 0,
+        decrease: () => {
+          set((state) => {
+            return { count: state.count - 1 };
+          });
+        },
+        increase: () => {
+          set((state) => {
+            return { count: state.count + 1 };
+          });
+        },
+      };
+    },
     {
-      name: "count-storage",
-      getStorage: () => localStorage,
-    }
-  )
+      getStorage: () => {
+        return localStorage;
+      },
+      name: 'count-storage',
+    },
+  ),
 );
 
 const PersistCounter = () => {
-  const [count, increase, decrease] = useCounterStore((state) => [
-    state.count,
-    state.increase,
-    state.decrease,
-  ]);
+  const [count,
+    increase,
+    decrease] = useCounterStore((state) => {
+    return [
+      state.count,
+      state.increase,
+      state.decrease,
+    ];
+  });
   return (
     <Group>
       <Text>Count: {count}</Text>
-      <ActionIcon variant="outline" onClick={increase} radius={999}>
+      <ActionIcon onClick={increase} radius={999} variant="outline">
         +
       </ActionIcon>
-      <ActionIcon variant="outline" onClick={decrease} radius={999}>
+      <ActionIcon onClick={decrease} radius={999} variant="outline">
         -
       </ActionIcon>
     </Group>

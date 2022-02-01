@@ -1,19 +1,21 @@
-import React from "react";
-import { PageContextProvider } from "./usePageContext";
-import type { PageContext } from "types";
-import "./global.css";
+import React from 'react';
+import type { PageContext } from 'types';
+import { PageContextProvider } from './usePageContext';
+// eslint-disable-next-line import/no-unassigned-import
+import './global.css';
 
 export { PageShell };
 
-function PageShell({
+const PageShell = ({
   children,
   pageContext,
   Layout,
 }: {
-  children: React.ReactNode;
-  pageContext: PageContext;
-  Layout: ({ children }: { children: React.ReactNode }) => JSX.Element;
-}) {
+  // eslint-disable-next-line @typescript-eslint/no-shadow
+  Layout: ({ children }: { children: React.ReactNode, }) => JSX.Element,
+  children: React.ReactNode,
+  pageContext: PageContext,
+}) => {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
@@ -21,4 +23,4 @@ function PageShell({
       </PageContextProvider>
     </React.StrictMode>
   );
-}
+};

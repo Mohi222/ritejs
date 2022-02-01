@@ -1,58 +1,53 @@
-import path from "path";
-import { UserConfig } from "vite";
-
-import ssr from "vite-plugin-ssr/plugin";
-import react from "@vitejs/plugin-react";
-import IconsResolver from "unplugin-icons/resolver";
-import Icons from "unplugin-icons/vite";
-import AutoImport from "unplugin-auto-import/vite";
-import svgrPlugin from "vite-plugin-svgr";
-import mdx from "vite-plugin-mdx";
-import tsconfigPaths from "vite-tsconfig-paths";
-import { ViteTips } from "vite-plugin-tips";
-import sassDts from "vite-plugin-sass-dts";
-import { ViteWebfontDownload } from "vite-plugin-webfont-dl";
+import path from 'path';
+import react from '@vitejs/plugin-react';
+import AutoImport from 'unplugin-auto-import/vite';
+import IconsResolver from 'unplugin-icons/resolver';
+import Icons from 'unplugin-icons/vite';
+import type { UserConfig } from 'vite';
+import eslintPlugin from 'vite-plugin-eslint';
+import mdx from 'vite-plugin-mdx';
+import sassDts from 'vite-plugin-sass-dts';
+import ssr from 'vite-plugin-ssr/plugin';
+import svgrPlugin from 'vite-plugin-svgr';
+import { ViteTips } from 'vite-plugin-tips';
+import { ViteWebfontDownload } from 'vite-plugin-webfont-dl';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 const config: UserConfig = {
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./modules"),
-    },
-  },
   plugins: [
     react(),
     ssr(),
     AutoImport({
       imports: [
-        "react",
+        'react',
         {
           // Commonly used mantine components
-          "@mantine/core": [
-            "Button",
-            "ActionIcon",
-            "Card",
-            "Container",
-            "Group",
-            "Grid",
-            "Select",
-            "SimpleGrid",
-            "Text",
-            "Title",
-            "TextInput",
+          '@mantine/core': [
+            'Button',
+            'ActionIcon',
+            'Card',
+            'Container',
+            'Group',
+            'Grid',
+            'Select',
+            'SimpleGrid',
+            'Text',
+            'Title',
+            'TextInput',
           ],
         },
       ],
       resolvers: [
         IconsResolver({
-          prefix: "Icon",
-          extension: "jsx",
+          extension: 'jsx',
+          prefix: 'Icon',
         }),
       ],
     }),
     Icons({
-      compiler: "jsx",
-      jsx: "react",
       autoInstall: true,
+      compiler: 'jsx',
+      jsx: 'react',
     }),
     svgrPlugin({
       svgrOptions: {
@@ -65,10 +60,16 @@ const config: UserConfig = {
     ViteTips(),
     sassDts(),
     ViteWebfontDownload([
-      "https://fonts.googleapis.com/css2?family=Raleway&display=swap",
-      "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap",
+      'https://fonts.googleapis.com/css2?family=Raleway&display=swap',
+      'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap',
     ]),
+    eslintPlugin(),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './modules'),
+    },
+  },
 };
 
 export default config;

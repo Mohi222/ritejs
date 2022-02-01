@@ -1,19 +1,23 @@
-import React from "react";
-import { usePageContext } from "../usePageContext";
+import React from 'react';
+import { usePageContext } from '../usePageContext';
 
 export { Link };
 
-function Link(props: {
-  href?: string;
-  className?: string;
-  children: React.ReactNode;
-}) {
+const Link = (props: {
+  children: React.ReactNode,
+  className?: string,
+  href?: string,
+}) => {
+  const { href,
+    children,
+    ...rest } = props;
   const pageContext = usePageContext();
   const className = [
     props.className,
-    pageContext.urlPathname === props.href && "is-active",
+    pageContext.urlPathname === href && 'is-active',
   ]
     .filter(Boolean)
-    .join(" ");
-  return <a {...props} className={className} />;
-}
+    .join(' ');
+
+  return <a {...rest} className={className} href={href}>{children}</a>;
+};

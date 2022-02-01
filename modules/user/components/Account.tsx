@@ -1,31 +1,40 @@
-import { supabase } from "@/supabase/libs/supabaseClient";
-import { Button, Group, Text, TextInput, Title } from "@mantine/core";
-import { Session } from "@supabase/supabase-js";
-import React, { useEffect, useState } from "react";
+import { Button,
+  Group,
+  Text,
+  TextInput,
+} from '@mantine/core';
+import type { Session } from '@supabase/supabase-js';
+import React, { useEffect,
+  useState } from 'react';
+import { supabase } from '@/supabase/libs/supabaseClient';
 
-const Account = ({ session }: { session: Session }) => {
-  const [loading, setLoading] = useState(true);
-  const [username, setUsername] = useState("");
-  const [website, setWebsite] = useState("");
-  const [avatar_url, setAvatarUrl] = useState("");
+const Account = ({ session }: { session: Session, }) => {
+  const [loading,
+    setLoading] = useState(true);
+  const [username,
+    setUsername] = useState('');
+  const [website,
+    setWebsite] = useState('');
+  const [avatarUrl,
+    setAvatarUrl] = useState('');
 
-  useEffect(() => {
-    getProfile();
-  }, [session]);
 
-  async function getProfile() {
+
+  const getProfile = async () => {
     try {
       setLoading(true);
       const user = supabase.auth.user();
 
-      let { data, error, status } = await supabase
-        .from("profiles")
-        .select(`username, website, avatar_url`)
-        .eq("id", user?.id)
+      const { data,
+        error,
+        status } = await supabase
+        .from('profiles')
+        .select('username, website, avatar_url')
+        .eq('id', user?.id)
         .single();
 
       if (error && status !== 406) {
-        throw error;
+        throw new Error(error.message);
       }
 
       if (data) {
@@ -33,76 +42,80 @@ const Account = ({ session }: { session: Session }) => {
         setWebsite(data.website);
         setAvatarUrl(data.avatar_url);
       }
-    } catch (error: any) {
-      alert(error.message);
+    } catch (error: unknown) {
+      console.error(error);
     } finally {
       setLoading(false);
     }
-  }
+  };
 
-  async function updateProfile({
-    username,
-    website,
-    avatar_url,
-  }: {
-    username: string;
-    website: string;
-    avatar_url: string;
-  }) {
+  useEffect(() => {
+    void getProfile();
+  }, [session]);
+
+  const updateProfile = async () => {
     try {
       setLoading(true);
       const user = supabase.auth.user();
 
       const updates = {
+        avatarUrl,
         id: user?.id,
+        updated_at: new Date(),
         username,
         website,
-        avatar_url,
-        updated_at: new Date(),
       };
 
-      let { error } = await supabase.from("profiles").upsert(updates, {
-        returning: "minimal", // Don't return the value after inserting
+      const { error } = await supabase.from('profiles').upsert(updates, {
+        // Don't return the value after inserting
+        returning: 'minimal',
       });
 
       if (error) {
-        throw error;
+        throw new Error(error.message);
       }
-    } catch (error: any) {
-      alert(error.message);
+    } catch (error: unknown) {
+      console.error(error);
     } finally {
       setLoading(false);
     }
-  }
+  };
+
   return (
     <Group direction="column" position="center">
       <Text align="center">Welcome{username && ` ${username}`}</Text>
-
       <TextInput
-        value={session.user!.email}
-        placeholder="Email"
-        label="Email"
         disabled
+        label="Email"
+        placeholder="Email"
+        value={session.user?.email}
       />
       <TextInput
-        value={username || ""}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Username"
         label="Username"
+        onChange={(event) => {
+          setUsername(event.target.value);
+        }}
+        placeholder="Username"
+        value={username || ''}
       />
-
       <TextInput
-        value={website || ""}
-        onChange={(e) => setWebsite(e.target.value)}
-        placeholder="Website"
         label="Website"
+        onChange={(event) => {
+          setWebsite(event.target.value);
+        }}
+        placeholder="Website"
+        value={website || ''}
       />
-
       <Group>
-        <Button onClick={() => supabase.auth.signOut()}>Sign out</Button>
+        <Button onClick={() => {
+          return supabase.auth.signOut();
+        }}
+        >Sign out</Button>
         <Button
-          onClick={() => updateProfile({ username, website, avatar_url })}
           loading={loading}
+          onClick={() => {
+            return updateProfile();
+          }}
         >
           Update
         </Button>

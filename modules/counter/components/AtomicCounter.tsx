@@ -1,25 +1,33 @@
-import { ActionIcon, Button, Group, Text } from "@mantine/core";
-import { atom, useAtom } from "jotai";
-import React from "react";
+import { ActionIcon,
+  Group,
+} from '@mantine/core';
+import { atom,
+  useAtom } from 'jotai';
+import React from 'react';
 
 export const CountAtom = atom(0);
 
 const AtomicCounter = () => {
-  const [count, setCount] = useAtom(CountAtom);
+  const [count,
+    setCount] = useAtom(CountAtom);
 
   return (
     <Group>
       <ActionIcon
-        variant="outline"
-        onClick={() => setCount(count + 1)}
+        onClick={() => {
+          setCount(count + 1);
+        }}
         radius={999}
+        variant="outline"
       >
         +
       </ActionIcon>
       <ActionIcon
-        variant="outline"
-        onClick={() => setCount(count - 1)}
+        onClick={() => {
+          setCount(count - 1);
+        }}
         radius={999}
+        variant="outline"
       >
         -
       </ActionIcon>

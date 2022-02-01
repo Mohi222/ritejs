@@ -2,7 +2,9 @@
   "extends": ["canonical", "prettier"],
   "rules": {
     "canonical/filename-match-exported": "off",
-    "react/forbid-component-props": "off"
+    "react/forbid-component-props": "off",
+    "no-console": "off",
+    "jsonc/sort-keys": "off"
   },
   "overrides": [
     {
@@ -19,6 +21,10 @@
         "canonical/typescript"
       ],
       "files": "*.tsx",
+      "rules": {
+        // We use typescript
+        "react/jsx-no-undef": "off"
+      },
       "parserOptions": {
         "project": "./tsconfig.json"
       }
@@ -28,5 +34,6 @@
       "files": "*.json"
     }
   ],
-  "root": true
+  "root": true,
+  "ignorePatterns": ["node_modules", "dist", "auto-imports.d.ts", "public"]
 }

@@ -1,6 +1,4 @@
-import SimpleCounter from "./components/SimpleCounter";
-import AtomicCounter from "./components/AtomicCounter";
-import AtomicDisplay from "./components/AtomicDisplay";
-import PersistCounter from "./components/PersistCounter";
-
-export { SimpleCounter, AtomicCounter, AtomicDisplay, PersistCounter };
+export {default as AtomicCounter} from './components/AtomicCounter';
+export {default as AtomicDisplay} from './components/AtomicDisplay';
+export {default as PersistCounter} from './components/PersistCounter';
+export {default as SimpleCounter} from './components/SimpleCounter';

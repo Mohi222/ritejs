@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-const CustomUserLayout = ({ children }: { children: React.ReactNode }) => {
+const CustomUserLayout = ({ children }: { children: React.ReactNode, }) => {
   return (
     <div
       style={{
-        display: "flex",
+        display: 'flex',
+        margin: 'auto',
         maxWidth: 900,
-        margin: "auto",
       }}
     >
       <h1>User layout</h1>

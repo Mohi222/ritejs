@@ -1,49 +1,49 @@
-import ReactDOMServer from "react-dom/server";
-import React from "react";
-import { PageShell } from "./PageShell";
-import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
-import { PageContext } from "types";
-import type { PageContextBuiltIn } from "vite-plugin-ssr";
-import DefaultLayout from "./layouts/DefaultLayout";
-import { createStylesServer, ServerStyles } from "@mantine/ssr";
-import Html from "./Html";
+import { createStylesServer,
+  ServerStyles } from '@mantine/ssr';
+import React from 'react';
+import ReactDOMServer from 'react-dom/server';
+import type { PageContext } from 'types';
+import { escapeInject,
+  dangerouslySkipEscape } from 'vite-plugin-ssr';
+import type { PageContextBuiltIn } from 'vite-plugin-ssr';
+import Html from './Html';
+import { PageShell } from './PageShell';
+import DefaultLayout from './layouts/DefaultLayout';
+
 export { render };
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ["pageProps", "urlPathname"];
+export const passToClient = ['pageProps', 'urlPathname'];
 
 const stylesServer = createStylesServer();
-async function render(pageContext: PageContextBuiltIn & PageContext) {
-  const { Page, pageProps } = pageContext;
+const render = async (pageContext: PageContext & PageContextBuiltIn) => {
+  const { Page,
+    pageProps } = pageContext;
   const Layout = Page.getLayout || DefaultLayout;
   const pageContent = ReactDOMServer.renderToString(
-    <PageShell pageContext={pageContext} Layout={Layout}>
+    <PageShell Layout={Layout} pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
-  );
-
-  const styles = ReactDOMServer.renderToString(
-    <ServerStyles html={pageContent} server={stylesServer} />
+    </PageShell>,
   );
 
   // See https://vite-plugin-ssr.com/head
   const { documentProps } = pageContext;
-  const title = (documentProps && documentProps.title) || "Rite";
+  const title = (documentProps?.title) ?? 'Rite';
   const desc =
-    (documentProps && documentProps.description) ||
-    "An opinionated React starter kit";
+    (documentProps?.description) ??
+    'An opinionated React starter kit';
 
   const pageHtml = ReactDOMServer.renderToStaticMarkup(
     <Html
-      title={title}
       desc={desc}
       styles={<ServerStyles html={pageContent} server={stylesServer} />}
+      title={title}
     >
       {pageContent}
-    </Html>
+    </Html>,
   );
 
   const documentHtml = escapeInject`<!DOCTYPE html>\n${dangerouslySkipEscape(
-    pageHtml
+    pageHtml,
   )}`;
 
   // const documentHtml = escapeInject`<!DOCTYPE html>
@@ -67,4 +67,4 @@ async function render(pageContext: PageContextBuiltIn & PageContext) {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
     },
   };
-}
+};
